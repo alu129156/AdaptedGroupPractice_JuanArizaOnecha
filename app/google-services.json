@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "40361859549",
+    "firebase_url": "https://grouptask-mobapp-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "grouptask-mobapp",
+    "storage_bucket": "grouptask-mobapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40361859549:android:58abbc91dc4a0d55cc3e34",
+        "android_client_info": {
+          "package_name": "com.example.weatherapp_juanarizaonecha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOy4bIXfNrjweY5pYGqxrFCP6Csit96jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40361859549:android:a801fcbae272cbcdcc3e34",
+        "android_client_info": {
+          "package_name": "com.example.weatherapp_mobapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOy4bIXfNrjweY5pYGqxrFCP6Csit96jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
