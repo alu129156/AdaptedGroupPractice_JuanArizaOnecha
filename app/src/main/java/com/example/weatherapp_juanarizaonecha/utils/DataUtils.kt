@@ -160,13 +160,18 @@ object DataUtils {
     fun setCitiesIntoList() {
         cities = citiesMap.values.toMutableList()
     }
-    fun setFavCities(repository: CrudAPI) {
+    fun setFavCities(repository: CrudAPI, repositoryUser: CrudAPI) {
         cities.forEach { city ->
             city.favourite = repository.contains(city.name)
         }
-        addUser()
+        addUser(repositoryUser)
     }
-    private fun addUser() {
-        user = User("Juan","alu129156@usj.es", cities)
+    private fun addUser(repositoryUser: CrudAPI) {
+        val listUsers = repositoryUser.parse()
+        user = if(listUsers.isNotEmpty()) {
+            User(listUsers[0], listUsers[1], cities)
+        } else {
+            User("", "", cities)
+        }
     }
 }

@@ -13,6 +13,8 @@ import androidx.core.content.ContextCompat
 import com.example.weatherapp_juanarizaonecha.dao.SQLiteCityDao
 import com.example.weatherapp_juanarizaonecha.databinding.ActivitySplashScreenBinding
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.CrudAPI
+import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_KEY
+import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_KEY_USER
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_NAME
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SharedPreferencesRepository
 import com.example.weatherapp_juanarizaonecha.utils.CityRequest
@@ -44,7 +46,15 @@ class SplashScreenActivity : AppCompatActivity() {
             application.getSharedPreferences(
                 SHARED_PREFERENCES_NAME,
                 MODE_PRIVATE
-            )
+            ), SHARED_PREFERENCES_KEY
+        )
+    }
+    private val repositoryUser: CrudAPI by lazy {
+        SharedPreferencesRepository(
+            application.getSharedPreferences(
+                SHARED_PREFERENCES_NAME,
+                MODE_PRIVATE
+            ), SHARED_PREFERENCES_KEY_USER
         )
     }
     private val dao : SQLiteCityDao by lazy { init() }
@@ -102,7 +112,7 @@ class SplashScreenActivity : AppCompatActivity() {
                         jobs.joinAll() //If there a connection is resolve all the API requests
                         withContext(Dispatchers.Main) {
                             DataUtils.setCitiesIntoList()
-                            DataUtils.setFavCities(repository)
+                            DataUtils.setFavCities(repository, repositoryUser)
                             loadAllReports()
                             navigateToMainActivity(this@SplashScreenActivity)
                         }

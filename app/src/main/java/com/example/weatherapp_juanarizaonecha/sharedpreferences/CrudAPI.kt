@@ -11,4 +11,6 @@ interface CrudAPI {
     fun contains(value: String): Boolean
 
     fun clear()
+
+    fun parse(): List<String>
 }

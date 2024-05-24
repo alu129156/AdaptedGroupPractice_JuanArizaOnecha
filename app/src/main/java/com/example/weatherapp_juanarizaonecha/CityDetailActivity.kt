@@ -11,6 +11,7 @@ import com.example.weatherapp_juanarizaonecha.databinding.ActivityCityDetailBind
 import com.example.weatherapp_juanarizaonecha.filtering.getCity
 import com.example.weatherapp_juanarizaonecha.shared.Shared
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.CrudAPI
+import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_KEY
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_NAME
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SharedPreferencesRepository
 import com.example.weatherapp_juanarizaonecha.utils.City
@@ -25,7 +26,7 @@ class CityDetailActivity : AppCompatActivity() {
             application.getSharedPreferences(
                 SHARED_PREFERENCES_NAME,
                 MODE_PRIVATE
-            )
+            ), SHARED_PREFERENCES_KEY
         )
     }
 
