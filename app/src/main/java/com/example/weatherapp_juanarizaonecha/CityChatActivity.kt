@@ -1,4 +1,4 @@
-package com.example.weatherapp_mobapp
+package com.example.weatherapp_juanarizaonecha
 
 import android.content.Intent
 import android.graphics.Rect
