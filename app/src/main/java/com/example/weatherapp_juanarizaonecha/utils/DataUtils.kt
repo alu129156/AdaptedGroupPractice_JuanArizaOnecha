@@ -35,7 +35,7 @@ data class CityRequest(val name: String, val countryCode: String) {
     }
 }
 
-data class User(val name: String, val email: String, val cities: MutableList<City>)
+data class User(var name: String, var email: String, val cities: MutableList<City>)
 
 data class City(
     val name: String, val latitude: Float, val longitude: Float, val resolvedAdress: String?,
