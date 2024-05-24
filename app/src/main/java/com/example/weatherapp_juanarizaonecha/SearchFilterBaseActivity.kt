@@ -12,6 +12,7 @@ import com.example.weatherapp_juanarizaonecha.filtering.Filters
 import com.example.weatherapp_juanarizaonecha.filtering.SearchFilterController
 import com.example.weatherapp_juanarizaonecha.filtering.getCity
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.CrudAPI
+import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_KEY_USER
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SHARED_PREFERENCES_NAME
 import com.example.weatherapp_juanarizaonecha.sharedpreferences.SharedPreferencesRepository
 import com.example.weatherapp_juanarizaonecha.utils.City
@@ -27,7 +28,7 @@ abstract class SearchFilterBaseActivity : AppCompatActivity() {
             application.getSharedPreferences(
                 SHARED_PREFERENCES_NAME,
                 MODE_PRIVATE
-            )
+            ), SHARED_PREFERENCES_KEY_USER
         )
     }
 

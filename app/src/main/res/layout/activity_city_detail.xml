@@ -8,6 +8,48 @@
     android:background="#3F78B5"
     tools:context=".CityDetailActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnCityChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="City Chat"
+            android:src="@drawable/chat_icon"
+            app:tint="?attr/colorOnSecondary"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnCityComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="City Comments"
+            android:src="@drawable/add_comment_icon"
+            app:tint="?attr/colorOnSecondary"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
     <TextView
         android:id="@+id/twCityDet"
         android:layout_width="0dp"
