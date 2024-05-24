@@ -17,6 +17,8 @@ import com.example.weatherapp_juanarizaonecha.sharedpreferences.SharedPreference
 import com.example.weatherapp_juanarizaonecha.utils.City
 import com.example.weatherapp_juanarizaonecha.utils.DataUtils
 import com.example.weatherapp_juanarizaonecha.utils.HistoricUtils
+import com.example.weatherapp_mobapp.CityChatActivity
+import com.example.weatherapp_mobapp.CityPostedComments
 
 class CityDetailActivity : AppCompatActivity() {
     private val view by lazy { ActivityCityDetailBinding.inflate(layoutInflater) }
@@ -86,6 +88,19 @@ class CityDetailActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this,"No reports saved in ${city.name}", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        view.btnCityChat.setOnClickListener {
+            val intent = Intent(this, CityChatActivity::class.java).apply {
+                putExtra("cityName", city.name)
+            }
+            startActivity(intent)
+        }
+        view.btnCityComments.setOnClickListener {
+            val intent = Intent(this, CityPostedComments::class.java).apply {
+                putExtra("cityName", city.name)
+            }
+            startActivity(intent)
         }
     }
 

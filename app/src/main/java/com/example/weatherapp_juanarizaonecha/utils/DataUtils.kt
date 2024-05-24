@@ -165,6 +165,7 @@ object DataUtils {
             city.favourite = repository.contains(city.name)
         }
         addUser(repositoryUser)
+        println("User: $user")
     }
     private fun addUser(repositoryUser: CrudAPI) {
         val listUsers = repositoryUser.parse()
